@@ -8,7 +8,7 @@ export default function About() {
       <section className="bg-secondary py-20 px-6 text-center">
         <h1 className="text-4xl font-bold font-serif text-neutral mb-4">Our Legacy</h1>
         <p className="text-xl text-muted max-w-2xl mx-auto">
-          Crafting excellence since 1985. The story behind Masterline Tailor.
+          Crafting excellence since 1995. The story behind Masterline Tailor.
         </p>
       </section>
 
@@ -46,22 +46,59 @@ export default function About() {
             
             <div className="mt-10 grid grid-cols-2 gap-8">
               <div>
-                <h3 className="text-4xl font-bold text-accent mb-2">35+</h3>
+                <h3 className="text-4xl font-bold text-accent mb-2">30+</h3>
                 <p className="text-secondary font-medium">Years Experience</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold text-accent mb-2">5000+</h3>
+                <h3 className="text-4xl font-bold text-accent mb-2">2000+</h3>
                 <p className="text-secondary font-medium">Suits Crafted</p>
               </div>
             </div>
 
-            <div className="mt-10">
-              <Button href="/contact">Visit Our Workshop</Button>
-            </div>
+            
           </div>
         </div>
       </section>
-
+{/* Gallery Section */}
+      <section className="py-20 px-6 bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-secondary mb-4 font-serif">Exquisite Fabric Collection</h2>
+            <p className="text-muted max-w-2xl mx-auto">
+              Explore our hand-picked selection of premium fabrics, from fine wools to luxurious silks, 
+              sourced from the world's most prestigious mills.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              "WhatsApp Image 2026-03-24 at 20.51.08 (1).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.08 (2).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.08.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.09.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.11.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.12 (1).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.12.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.13 (1).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.13 (2).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.13.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.14 (1).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.14 (2).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.14.jpeg",
+            ].map((img, index) => (
+              <div key={index} className="relative aspect-[4/5] group overflow-hidden rounded-sm bg-neutral-100">
+                <Image
+                  src={`/images/${img}`}
+                  alt={`Premium Cloth ${index + 1}`}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/20 transition-colors duration-500" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Process Section */}
       <section className="py-20 px-6 bg-neutral border-t border-muted/10">
         <div className="container mx-auto text-center">
@@ -82,6 +119,8 @@ export default function About() {
            </div>
         </div>
       </section>
+
+      
     </div>
   );
 }

@@ -1,44 +1,78 @@
 import ServiceCard from "@/components/ServiceCard";
 import Button from "@/components/Button";
-import { Scissors, Ruler, Shirt, ShoppingBag, Watch, Gem } from "lucide-react";
+import Image from "next/image";
 
 export default function Services() {
   const services = [
     {
-      title: "Bespoke Suiting",
-      desc: "The pinnacle of tailoring. Hand-crafted from scratch to your exact specifications using the world's finest fabrics.",
-      icon: Scissors,
-      price: "From $1,200",
+      slug: "three-piece-suit",
+      title: "Three-Piece Suit",
+      desc: "The ultimate formal statement. Includes a custom-tailored jacket, trousers, and matching waistcoat for a complete look.",
+      image: "/images/three.png",
+      price: "From RM 2,800",
     },
     {
-      title: "Made-to-Measure",
-      desc: "Customized suits based on our house patterns, adjusted to your measurements for a superior fit compared to off-the-rack.",
-      icon: Ruler,
-      price: "From $800",
+      slug: "two-piece-suit",
+      title: "Two-Piece Suit",
+      desc: "Our signature classic. A perfectly coordinated jacket and trousers tailored to your exact measurements.",
+      image: "/images/two.png",
+      price: "From RM 2,200",
     },
     {
-      title: "Custom Shirts",
-      desc: "Perfectly fitting shirts with your choice of collar, cuff, and monogram. A wardrobe essential.",
-      icon: Shirt,
-      price: "From $150",
+      slug: "custom-batik-shirts",
+      title: "Custom Batik Shirts",
+      desc: "Perfectly fitting shirts with your choice of collar, cuff, and monogram. A wardrobe essential using premium batik materials.",
+      image: "/images/shirt.png",
+      price: "From RM 800",
     },
     {
+      slug: "custom-plain-shirt",
+      title: "Custom Plain Shirt",
+      desc: "Impeccably tailored plain shirts for daily professional wear or formal events. Available in a variety of premium cottons.",
+      image: "/images/plainShirt.png",
+      price: "From RM 400",
+    },
+    {
+      slug: "custom-blazers",
+      title: "Custom Blazers",
+      desc: "Versatile blazers for any occasion. Structured or unconstructed, tailored to your style and performance needs.",
+      image: "/images/blazer.png",
+      price: "From RM 1,800",
+    },
+    {
+      slug: "wedding-attire",
       title: "Wedding Attire",
       desc: "Look your absolute best on your special day. Tuxedos, morning suits, and groomsmen packages available.",
-      icon: Gem,
-      price: "Consultation",
+      image: "/images/wedding.png",
+      price: "From RM 2,200",
     },
     {
+      slug: "traditional-attire",
+      title: "Traditional Attire",
+      desc: "Masterfully crafted Malay traditional wear including Baju Melayu, blending heritage with modern fit.",
+      image: "/images/traditional.png",
+      price: "From RM 800",
+    },
+    {
+      slug: "custom-pants-slacks",
+      title: "Custom Pants & Slacks",
+      desc: "Tailored trousers designed for comfort and elegance. Choose from a wide range of wool, chinos, and linen fabrics.",
+      image: "/images/slack.png",
+      price: "From RM 450", 
+    },
+    {
+      slug: "alterations-repairs",
       title: "Alterations & Repairs",
       desc: "Expert resizing, relining, and repairs for your existing wardrobe. We treat every garment with care.",
-      icon: ShoppingBag,
-      price: "Varies",
+      image: "/images/alteration.png",
+      price: "",
     },
     {
+      slug: "accessories-styling",
       title: "Accessories Styling",
-      desc: "Complete your look with our curated selection of ties, pocket squares, and cufflinks.",
-      icon: Watch,
-      price: "Varies",
+      desc: "Complete your look with our curated selection of ties, pocket squares, and cufflinks. ",
+      image: "/images/accessories.png",
+      price: "",
     },
   ];
 
@@ -53,17 +87,18 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6 bg-background border-b border-muted/10">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <div key={service.title} className="h-full">
                 <ServiceCard
                   title={service.title}
                   description={service.desc}
-                  icon={service.icon}
+                  image={service.image}
                   price={service.price}
-                  href="/contact" // Direct to contact for booking
+                  href={`/services/${service.slug}`}
+                  badgeText={index < services.length - 2 ? "Materials Included" : undefined}
                 />
               </div>
             ))}
@@ -72,25 +107,42 @@ export default function Services() {
       </section>
 
       {/* Fabrics Section */}
-      <section className="py-20 px-6 bg-secondary text-neutral">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold font-serif mb-8">Premium Fabrics</h2>
-          <p className="mb-12 text-muted max-w-3xl mx-auto">
-            We partner with the world's most renowned mills to bring you an extensive collection of fabrics.
-            From lightweight linens for summer to heavy craftsmanship wools for winter.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-70">
-            {/* Placeholders for Fabric Brand Logos - using text for now */}
-            {['Holland & Sherry', 'Loro Piana', 'Ermenegildo Zegna', 'Scabal'].map(brand => (
-              <div key={brand} className="flex items-center justify-center p-8 border border-neutral/20 rounded-sm">
-                <span className="text-xl font-serif text-neutral/80">{brand}</span>
+      <section className="py-24 px-6 bg-neutral/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-secondary mb-4 font-serif">Exquisite Fabric Collection</h2>
+            <p className="text-muted max-w-2xl mx-auto">
+              Behind every masterpiece is the perfect foundation. Explore the world's finest cloths, 
+              from Italian wools to Egyptian cottons, available for all our bespoke services.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+            {[
+              "WhatsApp Image 2026-03-24 at 20.51.08 (1).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.08 (2).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.08.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.09.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.11.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.12 (1).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.12.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.13 (1).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.13 (2).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.13.jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.14 (1).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.14 (2).jpeg",
+              "WhatsApp Image 2026-03-24 at 20.51.14.jpeg"
+            ].map((img, index) => (
+              <div key={index} className="relative aspect-square group overflow-hidden rounded-sm bg-neutral border border-muted/5">
+                <Image
+                  src={`/images/${img}`}
+                  alt={`Fabric Sample ${index + 1}`}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
               </div>
             ))}
-          </div>
-          <div className="mt-12">
-            <Button href="/contact" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-secondary">
-              View Fabric Swatches
-            </Button>
           </div>
         </div>
       </section>

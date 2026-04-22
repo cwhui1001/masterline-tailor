@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import WhatsAppFAB from './WhatsAppFAB';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -24,6 +25,7 @@ export default function Layout({ children, pageTitle = 'Masterline Tailor' }: La
         {children}
       </main>
       <Footer />
+      <WhatsAppFAB />
     </div>
   );
 }

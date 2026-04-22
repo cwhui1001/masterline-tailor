@@ -49,7 +49,7 @@ export default function Header() {
                 <Scissors size={22} strokeWidth={1.5} />
               </div>
               <span className={`text-2xl font-bold font-serif tracking-tight transition-colors duration-300 ${logoTextClass}`}>
-                Masterline
+                Masterline Tailor
               </span>
             </Link>
 

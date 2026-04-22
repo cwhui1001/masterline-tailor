@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/Button";
 import ServiceCard from "@/components/ServiceCard";
-import { Scissors, Ruler, Shirt } from "lucide-react";
 
 export default function Home() {
   return (
@@ -102,19 +101,19 @@ export default function Home() {
             <ServiceCard 
               title="Bespoke Suits" 
               description="Fully canvassed, hand-cut, and tailored to your exact measurements for an impeccable fit and silhouette."
-              icon={Scissors}
+              image="/images/three.png"
               href="/services"
             />
             <ServiceCard 
               title="Custom Shirts" 
               description="Choose from hundreds of premium cottons and collar styles to create the perfect shirt for any occasion."
-              icon={Ruler}
+              image="/images/plainShirt.png"
               href="/services"
             />
              <ServiceCard 
               title="Expert Alterations" 
               description="Revitalize your wardrobe with our precision alteration services, breathing new life into your favorite garments."
-              icon={Shirt} // Using Shirt as placeholder for alteration/garment
+              image="/images/alteration.png"
               href="/services"
             />
           </div>

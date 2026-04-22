@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -13,9 +13,11 @@ export default function Footer() {
               Bespoke tailoring for the modern gentleman. We craft more than just suits; we craft confidence, legacy, and style.
             </p>
             <div className="flex gap-4">
-              {/* Using a helper map for socials or just simpler code */}
-              {[Instagram, Facebook, Twitter].map((Icon, i) => (
-                 <a key={i} href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral/10 text-neutral hover:bg-accent hover:text-secondary transition-all duration-300">
+              {[
+                { Icon: Instagram, href: "https://www.instagram.com/masterline_manshop?igsh=eG50NnZvczRyNHNm" },
+                { Icon: Facebook, href: "https://www.facebook.com/share/18nquiSCP4/" }
+              ].map(({ Icon, href }, i) => (
+                 <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral/10 text-neutral hover:bg-accent hover:text-secondary transition-all duration-300">
                     <Icon size={18} />
                  </a>
               ))}
@@ -46,7 +48,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold font-serif text-neutral mb-6 tracking-wide">Services</h4>
             <ul className="space-y-4">
-              {['Bespoke Suits', 'Custom Shirts', 'Wedding Attire', 'Expert Alterations'].map((service) => (
+              {['Three-Piece Suit', 'Two-Piece Suit', 'Traditional Attire', 'Custom Shirts', 'Custom Pants & Slacks', 'Custom Blazers', 'Expert Alterations'].map((service) => (
                 <li key={service} className="text-neutral/70 hover:text-neutral transition-colors cursor-default">
                   {service}
                 </li>
@@ -60,11 +62,18 @@ export default function Footer() {
             <ul className="space-y-6">
               <li className="flex items-start gap-4 text-neutral/70">
                 <MapPin size={22} className="text-accent shrink-0 mt-0.5" />
-                <span className="leading-relaxed">123 Tailor's Lane,<br />Fashion District, NY 10018</span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=4,+Jalan+SS+15/8B,+SS+15,+47500+Subang+Jaya,+Selangor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-relaxed hover:text-accent transition-colors"
+                >
+                  4, Jalan SS 15/8B, SS 15,<br />47500 Subang Jaya, Selangor
+                </a>
               </li>
               <li className="flex items-center gap-4 text-neutral/70 hover:text-accent transition-colors">
                 <Phone size={22} className="text-accent shrink-0" />
-                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                <a href="tel:+60126296326">012-629 6326</a>
               </li>
               <li className="flex items-center gap-4 text-neutral/70 hover:text-accent transition-colors">
                 <Mail size={22} className="text-accent shrink-0" />
