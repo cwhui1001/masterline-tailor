@@ -14,7 +14,7 @@ export default function About() {
 
       {/* Content */}
       <section className="py-20 px-6 bg-background">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1 relative h-[600px] w-full border-8 border-white/50 rounded-[2px] shadow-2xl overflow-hidden">
             <Image
               src="/images/about.png"
@@ -61,7 +61,7 @@ export default function About() {
       </section>
 {/* Gallery Section */}
       <section className="py-20 px-6 bg-background">
-        <div className="container mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-secondary mb-4 font-serif">Exquisite Fabric Collection</h2>
             <p className="text-muted max-w-2xl mx-auto">
@@ -101,7 +101,7 @@ export default function About() {
       </section>
       {/* Process Section */}
       <section className="py-20 px-6 bg-neutral border-t border-muted/10">
-        <div className="container mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
            <h2 className="text-3xl font-bold text-secondary mb-12 font-serif">The Bespoke Process</h2>
            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
              {[

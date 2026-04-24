@@ -4,7 +4,7 @@ import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="bg-secondary text-neutral pt-24 pb-12 border-t border-muted/20">
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20 mb-16">
           {/* Brand */}
           <div className="col-span-1">
@@ -75,10 +75,7 @@ export default function Footer() {
                 <Phone size={22} className="text-accent shrink-0" />
                 <a href="tel:+60126296326">012-629 6326</a>
               </li>
-              <li className="flex items-center gap-4 text-neutral/70 hover:text-accent transition-colors">
-                <Mail size={22} className="text-accent shrink-0" />
-                <a href="mailto:hello@masterline.com">hello@masterline.com</a>
-              </li>
+              
             </ul>
           </div>
         </div>

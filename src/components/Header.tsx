@@ -41,7 +41,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${headerClass}`}
       >
-        <div className="container mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
@@ -49,7 +49,7 @@ export default function Header() {
                 <Scissors size={22} strokeWidth={1.5} />
               </div>
               <span className={`text-2xl font-bold font-serif tracking-tight transition-colors duration-300 ${logoTextClass}`}>
-                Masterline Tailor
+                Masterline Manshop
               </span>
             </Link>
 

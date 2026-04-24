@@ -34,7 +34,7 @@ export default function Contact() {
         </p>
       </section>
 
-      <div className="container mx-auto py-20 px-6">
+      <div className="max-w-7xl mx-auto py-20 px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div>
@@ -71,17 +71,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-full text-primary mt-1">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-secondary mb-2">Email Us</h3>
-                  <a href="mailto:[EMAIL_ADDRESS]" className="text-muted hover:text-accent transition-colors">
-                    [EMAIL_ADDRESS]
-                  </a>
-                </div>
-              </div>
+              
 
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-primary/10 rounded-full text-primary mt-1">

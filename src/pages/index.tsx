@@ -47,7 +47,7 @@ export default function Home() {
 
       {/* Intro / Value Prop */}
       <section className="py-24 px-6 bg-neutral">
-        <div className="container mx-auto grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="mb-8 text-4xl font-bold font-serif text-secondary lg:text-5xl">
               Where Tradition Meets <span className="text-primary italic">Modern Style</span>
@@ -87,7 +87,7 @@ export default function Home() {
         {/* Subtle Background Pattern */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         
-        <div className="container mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="mb-20 text-center">
             <span className="text-accent uppercase tracking-widest text-sm font-bold mb-3 block">Our Craft</span>
             <h2 className="mb-6 text-4xl font-bold font-serif text-neutral lg:text-5xl">Bespoke Services</h2>

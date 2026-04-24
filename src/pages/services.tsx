@@ -88,7 +88,7 @@ export default function Services() {
 
       {/* Services Grid */}
       <section className="py-20 px-6 bg-background border-b border-muted/10">
-        <div className="container mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={service.title} className="h-full">
@@ -108,7 +108,7 @@ export default function Services() {
 
       {/* Fabrics Section */}
       <section className="py-24 px-6 bg-neutral/30">
-        <div className="container mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-secondary mb-4 font-serif">Exquisite Fabric Collection</h2>
             <p className="text-muted max-w-2xl mx-auto">

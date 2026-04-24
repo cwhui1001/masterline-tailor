@@ -123,7 +123,7 @@ export default function ServiceDetail() {
         />
         <div className="absolute inset-0 bg-secondary/40" />
         <div className="absolute inset-0 flex items-center justify-center text-center px-6">
-          <div className="container mx-auto">
+          <div className="max-w-7xl mx-auto">
             <Link href="/services" className="inline-flex items-center gap-2 text-neutral/80 hover:text-neutral mb-8 transition-colors">
               <ArrowLeft size={18} /> BACK TO SERVICES
             </Link>
@@ -137,7 +137,7 @@ export default function ServiceDetail() {
 
       {/* Content Section */}
       <section className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left: Info */}
             <div className="space-y-8">
@@ -219,7 +219,7 @@ export default function ServiceDetail() {
 
       {/* Trust Section */}
       <section className="py-20 px-6 bg-secondary text-neutral text-center">
-        <div className="container mx-auto max-w-3xl border-y border-neutral/10 py-12">
+        <div className="max-w-3xl mx-auto border-y border-neutral/10 py-12">
           <p className="text-xl font-serif italic opacity-80 mb-6">"Quality is never an accident; it is always the result of intelligent effort."</p>
           <p className="font-bold tracking-[0.2em] uppercase text-sm">Masterline Tailor Heritage</p>
         </div>
