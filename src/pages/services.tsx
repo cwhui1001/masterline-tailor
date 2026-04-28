@@ -60,13 +60,7 @@ export default function Services() {
       image: "/images/slack.png",
       price: "From RM 450", 
     },
-    {
-      slug: "alterations-repairs",
-      title: "Alterations & Repairs",
-      desc: "Expert resizing, relining, and repairs for your existing wardrobe. We treat every garment with care.",
-      image: "/images/alteration.png",
-      price: "",
-    },
+    
     {
       slug: "accessories-styling",
       title: "Accessories Styling",

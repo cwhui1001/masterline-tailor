@@ -111,8 +111,8 @@ export default function Home() {
               href="/services"
             />
              <ServiceCard 
-              title="Expert Alterations" 
-              description="Revitalize your wardrobe with our precision alteration services, breathing new life into your favorite garments."
+              title="Expert Craftmanship" 
+              description="Our master tailors bring decades of experience to every stitch, ensuring your garment is crafted to perfection."
               image="/images/alteration.png"
               href="/services"
             />
