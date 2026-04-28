@@ -19,6 +19,7 @@ export default function Layout({ children, pageTitle = 'Masterline Tailor' }: La
       <Head>
         <title>{pageTitle} | Bespoke Menswear</title>
         <meta name="description" content="Premium bespoke tailoring for the modern gentleman." />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Header />
       <main className={`flex-grow ${isHome ? '' : 'pt-24'}`}>
